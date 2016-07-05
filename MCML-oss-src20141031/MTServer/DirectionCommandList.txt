@@ -1,0 +1,4 @@
+ja,en=J-E
+ja,zh=J-C
+en,ja=E-J
+zh,ja=Z-J

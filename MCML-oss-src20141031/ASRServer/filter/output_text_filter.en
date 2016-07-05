@@ -1,0 +1,99 @@
+[setting]
+CAPITALIZE=ON
+PERIOD=.
+QUESTION_MARK=?
+
+[replace_word-1]
+i	I
+
+[replace_word-2]
+mr.	Mr.
+mrs.	Mrs.
+miss.	Miss.
+
+[question_word-1]
+who
+who's
+whom
+what
+what's
+when
+when's
+where
+where's
+why
+why's
+which
+how
+how's
+am
+are
+is
+was
+were
+amn't
+ain't
+aren't
+isn't
+wasn't
+weren't
+do
+does
+did
+don't
+doesn't
+didn't
+have
+has
+had
+haven't
+hasn't
+hadn't
+will
+would
+won't
+wouldn't
+shall
+should
+shouldn't
+can
+could
+cannot
+couldn't
+may
+might
+mayn't
+mightn't
+must
+mustn't
+need
+needn't
+dare
+daren't
+
+[question_word-2]
+
+[question_word-3]
+
+[delete_wordid-1]
+jee||jee|INTERJ||||	jee
+kay||kay|INTERJ||||	kay
+lo||lo|INTERJ||||	lo
+wah||wah|INTERJ||||	wah
+wowee||wowee|INTERJ||||	wowee
+ya||ya|INTERJ||||	ya
+yuk||yuk|INTERJ||||	yuk
+ahem||ahem|UH||||	ahem
+augh||augh|UH||||	augh
+ha||ha|UH||||	ha
+heh||heh|UH||||	heh
+ho||ho|UH||||	ho
+hoo||hoo|UH||||	hoo
+humh||humh|UH||||	humh
+umhum||umhum|UH||||	umhum
+umkay||umkay|UH||||	umkay
+umm||umm|UH||||	umm
+yipe||yipe|UH||||	yipe
+yipes||yipes|UH||||	yipes
+yoo||yoo|UH||||	yoo
+

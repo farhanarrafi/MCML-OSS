@@ -1,0 +1,93 @@
+<MCML Version="1" xsi:noNamespaceSchemaLocation="MCML4ITU_Sep6-1.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<User>
+		<Transmitter>
+			<Device>
+				<Location>
+					<URI>iPhone4</URI>
+					<GlobalPosition Longitude="-74.225910" Latitude="40.689853" />
+				</Location>
+			</Device>
+			<UserProfile ID="nict-dev-007" Gender="Female" Age="29" />
+		</Transmitter>
+		<Receiver>
+			<Device>
+				<Location>
+					<URI>iPhone4</URI>
+				</Location>
+			</Device>
+			<UserProfile ID="nict-dev-007" Gender="Female" Age="29" />
+		</Receiver>
+	</User>
+	<Server>
+		<Request Service="TTS" ProcessOrder="6">
+
+			<!-- e.g. owner -->
+
+			<InputUserProfile ID="owner" Gender="Female" Age="29">
+				<InputModality>
+					<Speaking>
+						<Language ID="en" Fluency="5" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+			<InputUserProfile ID="owner" Gender="Female" Age="29">
+				<InputModality>
+					<Speaking>
+						<Language ID="ko" Fluency="4" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+			<InputUserProfile ID="owner" Gender="Female" Age="29">
+				<InputModality>
+					<Speaking>
+						<Language ID="zh" Fluency="3" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+
+			<!-- e.g. guest -->
+
+<!--
+ 			<InputUserProfile ID="guest" />
+-->
+			<TargetOutput>
+				<LanguageType ID="ja" />
+			</TargetOutput>
+			<Input>
+				<Data>
+					<Text ChannelID="1">
+						<ModelType>
+							<Language ID="ja" />			<!-- This line is important for TTS -->
+							<Domain>Travel</Domain>
+							<Task>Dictation </Task>
+							<Personality ID="EF050A,12.345" Gender="Female" Age="29" />
+						</ModelType>
+						<SentenceSequence Order="1" Score="2.44"
+							N-BestRank="1">
+							<Sentence Order="1">
+								<Function>text</Function>
+								<Surface Delimiter="|">引きこもって無いで、たまには外に出かけなさい。</Surface>
+<!--
+								<Surface Delimiter="|">一緒に出かけませんか。</Surface>
+								<Surface Delimiter="|">お元気ですか。</Surface>
+								<Surface Delimiter="|">どこか行きたい場所はありませんか。</Surface>
+								<Surface Delimiter="|">空港に行きたい。</Surface>
+ -->
+								<Chunk Order="1">
+									<Surface>空港に</Surface>
+								</Chunk>
+								<Chunk Order="2">
+									<Surface>行き</Surface>
+								</Chunk>
+								<Chunk Order="3">
+									<Surface>たい</Surface>
+								</Chunk>
+							</Sentence>
+						</SentenceSequence>
+					</Text>
+				</Data>
+			</Input>
+		</Request>
+	</Server>
+</MCML>

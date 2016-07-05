@@ -1,0 +1,43 @@
+JAVA_HOME=C:/android/tool/Java/jdk1.7.0_51
+JAVA_BIN=$(JAVA_HOME)/bin
+JAVAC=$(JAVA_BIN)/javac
+JAVAH=$(JAVA_BIN)/javah
+
+SRC_DIR=jp/go/nict/speex4j
+
+JCLASS= jp.go.nict.speex4j.SpeexEncoder \
+	jp.go.nict.speex4j.SpeexDecoder
+
+JNI_H=  jp_go_nict_speex4j_SpeexEncoder.h \
+	jp_go_nict_speex4j_SpeexDecoder.h
+
+CFLAGS= -I./include -fPIC -m64 -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/win32
+#CXXFLAGS=-m32
+#LDFLAGS= -static-libgcc -static-libstdc++
+
+all: speex4j.dll
+#all: libspeex4j.so
+
+speex4j.o: speex4j.cpp
+#	$(CXX) $(CFLAGS) -m64 -c $< -shared -o $@ -D__int64="long long"
+	$(CXX) $(CFLAGS) -m64 -c $< -shared -o $@
+
+speex4j.dll: jdone speex4j.o 
+#libspeex4j.so: jdone speex4j.o 
+#	$(CXX) $(LDFLAGS) -m32 -shared -o $@ speex4j.o libspeex/*.o
+#	$(CXX) -m64 -shared -o $@ speex4j.o libspeex/*.o -D_JNI_IMPLEMENTATION_ -Wl,--kill-at 
+	$(CXX) -m64 -shared -o $@ speex4j.o libspeex/*.o
+
+jdone: 
+	$(JAVAC) $(SRC_DIR)/*.java
+	$(JAVAH) -jni $(JCLASS)
+	echo done > jdone
+
+#test:
+#	$(JAVAC) EncodeTest.java
+
+clean:
+	rm libspeex/*.o speex4j.o jdone
+
+#tar:
+#	tar zcf speex4j.tgz $(SRC_DIR)/*.java libspeex/{*.[ch],Makefile,COPYING,AUTHORS} include speex4j.cpp Makefile README

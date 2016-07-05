@@ -1,0 +1,60 @@
+<MCML Version="1" xsi:noNamespaceSchemaLocation="MCML4ITU_Sep6-1.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<User>
+		<Transmitter>
+			<Device>
+				<Location>
+					<URI>iPhone4</URI>
+				</Location>
+			</Device>
+			<UserProfile ID="tarou" Gender="Male" Age="29" />
+		</Transmitter>
+		<Receiver>
+			<Device>
+				<Location>
+					<URI>iPhone4</URI>
+				</Location>
+			</Device>
+			<UserProfile ID="tarou" Gender="Male" Age="29" />
+		</Receiver>
+	</User>
+	<Server>
+		<Request Service="MT" ProcessOrder="2">
+			<InputUserProfile ID="EF050A,12.345" Gender="Male"
+				Age="29">
+				<InputModality>
+					<Speaking>
+						<Language ID="zh" Fluency="0" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+			<TargetOutput>
+				<HypothesisFormat NofN-best="1" />
+				<LanguageType ID="en" />
+			</TargetOutput>
+			<Input>
+				<Data>
+					<Text ChannelID="1">
+						<ModelType>
+							<Language ID="zh" />
+							<Domain>Travel</Domain>
+							<Task>Dictation </Task>
+							<Personality ID="EF050A,12.345" Gender="Male" Age="29" />
+						</ModelType>
+						<SentenceSequence N-bestRank="1" Order="1" Score="0">
+							<Sentence Order="1">
+								<Surface Delimiter="">早上好。</Surface>
+								<Chunk Order="1">
+									<Surface>早上好</Surface>
+								</Chunk>
+								<Chunk Order="2">
+									<Surface>。</Surface>
+								</Chunk>
+							</Sentence>
+						</SentenceSequence>
+					</Text>
+				</Data>
+			</Input>
+		</Request>
+	</Server>
+</MCML>

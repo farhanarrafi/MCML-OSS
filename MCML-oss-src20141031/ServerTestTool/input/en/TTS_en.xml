@@ -1,0 +1,75 @@
+<MCML Version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="MCML.xsd">
+	<User>
+		<Transmitter>
+			<Device>
+				<Location>
+					<URI>iPhone4S</URI>
+					<GlobalPosition Latitude="34.7458" Longitude="135.76" />
+				</Location>
+			</Device>
+			<UserProfile ID="chiori" />
+		</Transmitter>
+		<Receiver>
+			<Device>
+				<Location>
+					<URI>iPhone4S</URI>
+				</Location>
+			</Device>
+			<UserProfile ID="chiori" />
+		</Receiver>
+	</User>
+	<Server>
+		<Request Service="TTS" ProcessOrder="362">
+			<InputUserProfile ID="chiori" Gender="Male" Age="40">
+				<InputModality>
+					<Speaking>
+						<Language ID="en" Fluency="0" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+			<TargetOutput>
+				<LanguageType ID="en" />
+			</TargetOutput>
+			<Input>
+				<Data>
+					<Text ChannelID="1">
+						<ModelType>
+							<Language ID="en" />
+							<Domain>Travel</Domain>
+							<Task>Dictation</Task>
+							<Personality ID="chiori" />
+						</ModelType>
+						<SentenceSequence Order="1" Score="0" N-bestRank="1">
+							<Sentence Order="1">
+								<Function>text</Function>
+								<Surface Delimiter="|">Single in the non smoking section please.</Surface>
+								<Chunk Order="1">
+									<Surface>Single</Surface>
+								</Chunk>
+								<Chunk Order="2">
+									<Surface>in</Surface>
+								</Chunk>
+								<Chunk Order="3">
+									<Surface>the</Surface>
+								</Chunk>
+								<Chunk Order="4">
+									<Surface>non</Surface>
+								</Chunk>
+								<Chunk Order="5">
+									<Surface>smoking</Surface>
+								</Chunk>
+								<Chunk Order="6">
+									<Surface>section</Surface>
+								</Chunk>
+								<Chunk Order="7">
+									<Surface>please.</Surface>
+								</Chunk>
+							</Sentence>
+						</SentenceSequence>
+					</Text>
+				</Data>
+			</Input>
+		</Request>
+	</Server>
+</MCML>

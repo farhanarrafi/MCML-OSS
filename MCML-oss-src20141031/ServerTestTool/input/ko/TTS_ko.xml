@@ -1,0 +1,56 @@
+<MCML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1.0" xsi:noNamespaceSchemaLocation="MCML.xsd">
+  <User>
+    <Transmitter>
+      <Device>
+        <Location>
+          <URI>iPod-touch4G_133.243.3.18_135347327535230</URI>
+          <GlobalPosition Latitude="34.7455" Longitude="135.761"/>
+        </Location>
+      </Device>
+      <UserProfile ID="nict-dev-17"/>
+    </Transmitter>
+    <Receiver>
+      <Device>
+        <Location>
+          <URI>iPod-touch4G_133.243.3.18_135347327535230</URI>
+        </Location>
+      </Device>
+      <UserProfile ID="nict-dev-17"/>
+    </Receiver>
+  </User>
+  <Server>
+    <Request ProcessOrder="4089" Service="TTS">
+      <InputUserProfile Age="0" Gender="Male" ID="nict-dev-17">
+        <InputModality>
+          <Speaking>
+            <Language Fluency="0" ID="ko"/>
+          </Speaking>
+        </InputModality>
+      </InputUserProfile>
+      <TargetOutput>
+        <LanguageType ID="ko"/>
+      </TargetOutput>
+      <Input>
+        <Data>
+          <Text ChannelID="1">
+            <ModelType>
+              <Language ID="ko"/>
+              <Domain>Travel</Domain>
+              <Task>Dictation</Task>
+              <Personality ID="nict-dev-17"/>
+            </ModelType>
+            <SentenceSequence N-bestRank="1" Order="1" Score="0">
+              <Sentence Order="1">
+                <Function>text</Function>
+                <Surface Delimiter="|">메리크리스마스</Surface>
+                <Chunk Order="1">
+                  <Surface>메리크리스마스.</Surface>
+                </Chunk>
+              </Sentence>
+            </SentenceSequence>
+          </Text>
+        </Data>
+      </Input>
+    </Request>
+  </Server>
+</MCML>

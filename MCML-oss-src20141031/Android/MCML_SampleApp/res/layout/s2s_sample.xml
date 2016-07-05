@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="fill_parent" android:layout_width="fill_parent" android:orientation="horizontal">
+    <LinearLayout android:orientation="vertical" android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/linearLayoutS2SArea" android:layout_weight="1">
+        <LinearLayout android:layout_width="fill_parent" android:layout_weight="1" android:layout_height="fill_parent" android:orientation="vertical" android:id="@+id/linearLayoutUpper">
+            <Spinner android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/spinnerUpper" android:entries="@array/languages" android:prompt="@string/mes_language_select"></Spinner>
+            <TextView android:layout_width="fill_parent" android:id="@+id/textViewUpper" android:layout_height="fill_parent" android:textColor="#FFFFFF" android:text="@string/p2talk_message"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/linearLayoutLower">
+            <Spinner android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/spinnerLower" android:entries="@array/languages" android:prompt="@string/mes_language_select"></Spinner>
+            <TextView android:layout_width="fill_parent" android:id="@+id/textViewLower" android:layout_height="fill_parent" android:textColor="#FFFFFF" android:text="@string/p2talk_message"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayoutOption" android:orientation="horizontal" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="10">
+        <LinearLayout android:id="@+id/linearLayoutLevelMeter" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@+id/L19" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L18" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L17" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L16" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L15" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L14" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1" ></TextView>
+            <TextView android:id="@+id/L13" android:text="" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L12" android:text="" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L11" android:text="" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L10" android:text="" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L9" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L8" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L7" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L6" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L5" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L4" android:text="" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1" ></TextView>
+            <TextView android:id="@+id/L3" android:text="" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L2" android:text="" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L1" android:text="" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1"></TextView>
+            <TextView android:id="@+id/L0" android:text="" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

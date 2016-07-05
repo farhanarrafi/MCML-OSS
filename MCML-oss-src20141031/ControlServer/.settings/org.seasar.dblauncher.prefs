@@ -1,0 +1,4 @@
+baseDir=/ControlServer/WEB-INF/classes/data
+dbPortNo=9093
+eclipse.preferences.version=1
+webPortNo=8083

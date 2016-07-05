@@ -1,0 +1,57 @@
+<MCML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	Version="1.0">
+	<User>
+		ClientIP:61.86.246.76/TimetoRecieve:1339408828300
+		<Transmitter>
+
+			<UserProfile ID="nict05" />
+			<Device>
+
+				<Location>
+
+					<GlobalPosition Latitude="34.7455" Longitude="135.76" />
+					<URI>iPhone3GS_61.86.246.76</URI>
+				</Location>
+			</Device>
+		</Transmitter>
+		<Receiver>
+
+			<UserProfile ID="nict05" />
+			<Device>
+
+				<Location>
+
+					<URI>iPhone3GS_61.86.246.76</URI>
+				</Location>
+			</Device>
+		</Receiver>
+	</User>
+	<Server>
+		<Request ProcessOrder="121" Service="ASR">
+			<InputUserProfile Age="99" Gender="male" ID="nict05">
+				<InputModality>
+					<Speaking>
+						<Language Fluency="0" ID="vi" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+			<TargetOutput>
+				<HypothesisFormat NofN-best="5" />
+				<LanguageType ID="vi" />
+			</TargetOutput>
+			<Input>
+				<Data>
+					<Audio ChannelID="0">
+						<ModelType>
+							<Domain>Trabel</Domain>
+							<Task>Dictation</Task>
+						</ModelType>
+						<Signal AudioFormat="ADPCM" BitRate="16" ChannelQty="0"
+							Endian="big" SamplingRate="16000" ValueType="integer" />
+					</Audio>
+				</Data>
+				<AttachedBinary ChannelID="1" DataID="vi" />
+			</Input>
+		</Request>
+	</Server>
+</MCML>

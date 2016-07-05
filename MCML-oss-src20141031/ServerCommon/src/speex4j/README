@@ -1,0 +1,103 @@
+
+speex4j: JavaからSpeexを使うためのライブラリ
+
+	C言語で実装されたSpeexライブラリをJNI(Java Native Interface)を通して呼び出す
+
+ディレクトリ構成
+----------------
+
+	libspeex/*.[ch] -- C言語で書かれたSpeexのライブラリ(Speexディストリビューションから)
+		/Makefile
+
+	include/speex/*.h -- libspeexが見るインクルードファイル
+
+	jp/go/nict/speex4j/{SpeexEncoder,SpeexDecoder}.java -- SpeexライブラリのJNI
+
+	speex4j.cpp -- JNIからSpeexライブラリを呼び出すための橋渡しをするC++ライブラリのソース
+	Makefile
+
+	README	-- このファイル
+
+コンパイルの仕方
+----------------
+
+ 1. Speexライブラリをコンパイルする
+
+	% cd libspeex
+	% make
+	% cd ../
+
+ 2. Javaのソースとspeex4j.cppをコンパイルし、libspeex4j.soを作る
+
+	% make
+
+	  - MakefileはJavaのコンパイル環境などを参照しているので、適当に編集する
+
+	  - このmakeで、jp/go/nict/speex4j/{SpeexEncoder,SpeexDecoder}.class というJNIのクラスができる
+	    この2つのクラスは、libspeex4j.soをロードして、Speexを実行する
+
+
+エンディアンについて
+--------------------
+
+	音声データは *LITTE* endian
+
+
+speex4jの使い方
+---------------
+
+ 0. libspeex4j.soをjava.library.pathで設定されたパスのところにおく
+
+
+ 1. エンコード(圧縮)の仕方
+
+	import jp.go.nict.speex4j.SpeexEncoder;
+
+	SpeexEncoder enc = new SpeexEncoder(); // SpeexEncoderインスタンスを作る
+
+	byte[] buf = new byte[160*2*5];	// このバイト長は適当(10ms分(160*2バイト) * 5 という意味)
+	int size = 0;
+	while ((size = System.in.read(buf, 0, buf.length)) >= 0) { // 音声サンプルのバイト列
+
+		byte[] data = enc.encode(buf, size); // buf[0...size-1]のバイト列をエンコードする
+
+		// buf中のエンコードできる部分のエンコードを行なう。(speexは20ms単位にエンコード)
+		// もしエンコードするのに充分なバイト列がない場合は、サイズ0のbyte[]を返す。 <-- 注意!
+		// 今回エンコードできなかった分のバイト列をSpeexEncoder内に覚えているので
+		// 次回のencode()の呼び出しで、後続のバイト列を与えればよい。
+
+		// エンコードされたデータ(20ms分ごと)は以下のように先頭に長さを示す1バイトがついた
+		// データの列になっている
+		//
+		//   +---+---+---+- - - - - - --+
+		//   | N |   encoded data       |
+		//   +---+---+---+- - - - - - --+
+		//       |<----- N bytes ------>|
+	}
+
+	enc.destory(); // SpeexEncoderが必要なくなったら呼び出す
+	               // Speexのライブラリ(C言語)は状態変数(構造体)をアロケートしてるので、それを解放
+                       // (もししなければ、encがGCされるときにdestroy()が実行される)
+
+
+ 2. デコード(解凍)の仕方
+
+	import jp.go.nict.speex4j.SpeexDecoder;
+
+	SpeexDecoder dec = new SpeexDecoder(); // SpeexDecoderインスタンスを作る
+
+	byte[] buf = new byte[512];	// このバイト長は適当(Speexでは20ms分のデータの最大が110バイト)
+	int size = 0;
+	while ((size = System.in.read(buf, 0, buf.length)) >= 0) { // エンコードされたデータ列を読みこむ
+
+		byte[] data = dec.decode(buf, size); // buf[0...size-1]のバイト列をデコードする
+
+		// buf中のデコードできる部分のデコードを行なう。
+		// もしデコードするのに充分なバイト列がない場合は、サイズ0のbyte[]を返す。 <-- 注意!
+		// 今回デコードできなかった分のバイト列をSpeexDecoder内に覚えているので
+		// 次回のdecode()の呼び出しで、後続のバイト列を与えればよい。
+
+	}
+
+	dec.destory();
+

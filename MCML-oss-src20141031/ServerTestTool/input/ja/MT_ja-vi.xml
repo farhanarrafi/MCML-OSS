@@ -1,0 +1,87 @@
+<MCML Version="1" xsi:noNamespaceSchemaLocation="MCML4ITU_Sep6-1.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<User>
+		<Transmitter>
+			<Device>
+				<Location>
+					<URI>iPhone4</URI>
+					<GlobalPosition Longitude="135.754807" Latitude="35.009129" />
+				</Location>
+			</Device>
+			<UserProfile ID="tarou" Gender="Male" Age="29" />
+		</Transmitter>
+		<Receiver>
+			<Device>
+				<Location>
+					<URI>iPhone4</URI>
+				</Location>
+			</Device>
+			<UserProfile ID="tarou" Gender="Male" Age="29" />
+		</Receiver>
+	</User>
+	<Server>
+		<Request Service="MT" ProcessOrder="2">
+			<!-- e.g. owner -->
+
+			<InputUserProfile ID="owner" Gender="Male" Age="29">
+				<InputModality>
+					<Speaking>
+						<Language ID="jb" Fluency="5" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+			<InputUserProfile ID="owner" Gender="Male" Age="29">
+				<InputModality>
+					<Speaking>
+						<Language ID="ja" Fluency="4" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+			<InputUserProfile ID="owner" Gender="Male" Age="29">
+				<InputModality>
+					<Speaking>
+						<Language ID="ja" Fluency="3" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+
+			<!-- e.g. guest -->
+
+<!--
+ 			<InputUserProfile ID="guest" />
+-->
+			<TargetOutput>
+				<HypothesisFormat NofN-best="1" />
+				<LanguageType ID="vi" />
+			</TargetOutput>
+			<Input>
+				<Data>
+					<Text ChannelID="1">
+						<ModelType>
+							<Language ID="ja" />
+							<Domain>Travel</Domain>
+							<Task>Dictation </Task>
+							<Personality ID="EF050A,12.345" Gender="Male" Age="29" />
+						</ModelType>
+						<SentenceSequence Order="1" Score="2.44"
+							N-BestRank="1">
+							<Sentence Order="1">
+								<Function>text</Function>
+								<Surface Delimiter="|">おはよう|ござい|ます</Surface>
+								<Chunk Order="1">
+									<Surface>おはよう</Surface>
+								</Chunk>
+								<Chunk Order="2">
+									<Surface>ござい</Surface>
+								</Chunk>
+								<Chunk Order="3">
+									<Surface>ます</Surface>
+								</Chunk>
+							</Sentence>
+						</SentenceSequence>
+					</Text>
+				</Data>
+			</Input>
+		</Request>
+	</Server>
+</MCML>

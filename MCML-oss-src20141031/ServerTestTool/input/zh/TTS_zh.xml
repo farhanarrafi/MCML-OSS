@@ -1,0 +1,71 @@
+<MCML Version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCML.xsd">
+  <User>
+    <Transmitter>
+      <Device>
+        <Location>
+          <GlobalPosition Latitude="37.7858" Longitude="-122.406"/>
+          <URI>Unknown_5.0_1.0_WIFI</URI>
+        </Location>
+      </Device>
+      <UserProfile ID="3925c7a17669156fcefa6f6f33a04a11" Gender="Male" Age="30"/>
+    </Transmitter>
+    <Receiver>
+      <Device>
+        <Location>
+          <GlobalPosition Latitude="37.7858" Longitude="-122.406"/>
+          <URI>Unknown_5.0_1.0_WIFI</URI>
+        </Location>
+      </Device>
+      <UserProfile ID="3925c7a17669156fcefa6f6f33a04a11" Gender="Male" Age="30"/>
+    </Receiver>
+  </User>
+  <Server>
+    <Request Service="TTS" ProcessOrder="31">
+      <InputUserProfile ID="owner" Gender="Male" Age="30">
+        <InputModality>
+          <Speaking>
+            <Language ID="en" Fluency="5"/>
+          </Speaking>
+        </InputModality>
+      </InputUserProfile>
+      <InputUserProfile ID="owner" Gender="Male" Age="30">
+        <InputModality>
+          <Speaking>
+            <Language ID="ja" Fluency="4"/>
+          </Speaking>
+        </InputModality>
+      </InputUserProfile>
+      <InputUserProfile ID="owner" Gender="Male" Age="30">
+        <InputModality>
+          <Speaking>
+            <Language ID="en" Fluency="3"/>
+          </Speaking>
+        </InputModality>
+      </InputUserProfile>
+      <TargetOutput>
+        <LanguageType ID="zh"/>
+      </TargetOutput>
+      <Input>
+        <Data>
+          <Text ChannelID="1">
+            <ModelType>
+              <Language ID="zh"/>
+              <Domain>Travel</Domain>
+              <Task>Dictation</Task>
+              <Personality ID="3925c7a17669156fcefa6f6f33a04a11"/>
+            </ModelType>
+            <SentenceSequence Order="1" Score="0" N-bestRank="1">
+              <Sentence Order="1">
+                <Function>text</Function>
+                <Surface Delimiter="|">体育场在哪里。</Surface>
+                <Chunk Order="1">
+                  <Surface>体育场在哪里。</Surface>
+                </Chunk>
+              </Sentence>
+            </SentenceSequence>
+          </Text>
+        </Data>
+      </Input>
+    </Request>
+  </Server>
+</MCML>

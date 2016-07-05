@@ -1,0 +1,759 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D61A57B017BB603500A7AC34 /* ClientComCtrl.mm in Sources */ = {isa = PBXBuildFile; fileRef = D61A57AF17BB603500A7AC34 /* ClientComCtrl.mm */; };
+		D61A57B317BB605E00A7AC34 /* ChunkedMultipartConnection.mm in Sources */ = {isa = PBXBuildFile; fileRef = D61A57B217BB605E00A7AC34 /* ChunkedMultipartConnection.mm */; };
+		D61A57B617BB607200A7AC34 /* Code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D61A57B517BB607200A7AC34 /* Code.cpp */; };
+		D61A57B917BB60D400A7AC34 /* DefaultDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D61A57B817BB60D400A7AC34 /* DefaultDelegate.mm */; };
+		D61A57BA17BB675B00A7AC34 /* DefaultDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D61A57B717BB60C900A7AC34 /* DefaultDelegate.h */; };
+		D61A57BB17BB676800A7AC34 /* Code.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D61A57B417BB606900A7AC34 /* Code.h */; };
+		D61A57BF17BB6C9E00A7AC34 /* ChunkedMultipartConnection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D61A57B117BB605E00A7AC34 /* ChunkedMultipartConnection.h */; };
+		D629512F17B9F58000B2183E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D629512E17B9F58000B2183E /* libxml2.dylib */; };
+		D6E4ADA016D2F96500B8AA94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E4AD9F16D2F96500B8AA94 /* Foundation.framework */; };
+		D6E4ADB216D2FA9500B8AA94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E4AD9F16D2F96500B8AA94 /* Foundation.framework */; };
+		D6E4ADB716D2FA9500B8AA94 /* MCMLCom.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4ADB616D2FA9500B8AA94 /* MCMLCom.h */; };
+		D6E4ADCB16D2FAD600B8AA94 /* ComCtrl.mm in Sources */ = {isa = PBXBuildFile; fileRef = D6E4ADC516D2FAD600B8AA94 /* ComCtrl.mm */; };
+		D6E4ADCC16D2FAD600B8AA94 /* ComData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6E4ADC616D2FAD600B8AA94 /* ComData.cpp */; };
+		D6E4ADCE16D2FAD600B8AA94 /* MimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6E4ADC816D2FAD600B8AA94 /* MimeData.cpp */; };
+		D6E4ADCF16D2FAD600B8AA94 /* ResponseData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6E4ADC916D2FAD600B8AA94 /* ResponseData.cpp */; };
+		D6E4ADD516D2FB0900B8AA94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E4AD9F16D2F96500B8AA94 /* Foundation.framework */; };
+		D6E4ADEE16D2FB6100B8AA94 /* Doc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6E4ADE916D2FB6100B8AA94 /* Doc.cpp */; };
+		D6E4ADEF16D2FB6100B8AA94 /* mcml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6E4ADEA16D2FB6100B8AA94 /* mcml.cpp */; };
+		D6E4ADF016D2FB6100B8AA94 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6E4ADEB16D2FB6100B8AA94 /* Node.cpp */; };
+		D6E4ADF116D2FB6100B8AA94 /* SchemaTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6E4ADEC16D2FB6100B8AA94 /* SchemaTypes.cpp */; };
+		D6E4ADF216D2FB6100B8AA94 /* XMLProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6E4ADED16D2FB6100B8AA94 /* XMLProcessor.cpp */; };
+		D6E4AE2016D30C2600B8AA94 /* ClientComCtrl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE1B16D30BED00B8AA94 /* ClientComCtrl.h */; };
+		D6E4AE2116D30C2600B8AA94 /* ComCtrl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE1C16D30BED00B8AA94 /* ComCtrl.h */; };
+		D6E4AE2216D30C2600B8AA94 /* ComData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE1D16D30BED00B8AA94 /* ComData.h */; };
+		D6E4AE2316D30C2600B8AA94 /* MimeData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE1E16D30BED00B8AA94 /* MimeData.h */; };
+		D6E4AE2416D30C2600B8AA94 /* ResponseData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE1F16D30BED00B8AA94 /* ResponseData.h */; };
+		D6E4AE2516D30C3400B8AA94 /* Doc.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE0B16D30B1A00B8AA94 /* Doc.h */; };
+		D6E4AE2616D30C3400B8AA94 /* Lock.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE0C16D30B1A00B8AA94 /* Lock.h */; };
+		D6E4AE2716D30C3400B8AA94 /* mcml.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE0D16D30B1A00B8AA94 /* mcml.h */; };
+		D6E4AE2816D30C3400B8AA94 /* Node.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE0E16D30B1A00B8AA94 /* Node.h */; };
+		D6E4AE2916D30C3400B8AA94 /* SchemaTypes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE0F16D30B1A00B8AA94 /* SchemaTypes.h */; };
+		D6E4AE2A16D30C3400B8AA94 /* XmlException.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE1016D30B1A00B8AA94 /* XmlException.h */; };
+		D6E4AE2B16D30C3400B8AA94 /* XMLProcessor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE1116D30B1A00B8AA94 /* XMLProcessor.h */; };
+		D6E4AE3F16D314E400B8AA94 /* libAdpcm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E4AE3C16D314E400B8AA94 /* libAdpcm.a */; };
+		D6E4AE4016D314E400B8AA94 /* libiPhoneCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E4AE3D16D314E400B8AA94 /* libiPhoneCommon.a */; };
+		D6E4AE4116D314E400B8AA94 /* libiPhoneSignal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E4AE3E16D314E400B8AA94 /* libiPhoneSignal.a */; };
+		D6E4AE4216D3158D00B8AA94 /* libAdpcm.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE3C16D314E400B8AA94 /* libAdpcm.a */; };
+		D6E4AE4316D3158D00B8AA94 /* libiPhoneCommon.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE3D16D314E400B8AA94 /* libiPhoneCommon.a */; };
+		D6E4AE4416D3158D00B8AA94 /* libiPhoneSignal.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6E4AE3E16D314E400B8AA94 /* libiPhoneSignal.a */; };
+		D6E4AE4516D3158D00B8AA94 /* define.hh in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3116D314D300B8AA94 /* define.hh */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E4AE4616D3158D00B8AA94 /* g726.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3216D314D300B8AA94 /* g726.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E4AE4716D3158D00B8AA94 /* MemoryStream.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3316D314D300B8AA94 /* MemoryStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E4AE4816D3158D00B8AA94 /* NsVadDef.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3416D314D300B8AA94 /* NsVadDef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E4AE4916D3158D00B8AA94 /* ScopedMem.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3516D314D300B8AA94 /* ScopedMem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E4AE4A16D3158D00B8AA94 /* SignalAdpcm.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3616D314D300B8AA94 /* SignalAdpcm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E4AE4B16D3158D00B8AA94 /* SignalCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3716D314D300B8AA94 /* SignalCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E4AE4C16D3158D00B8AA94 /* SignalConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3816D314D300B8AA94 /* SignalConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E4AE4D16D3158D00B8AA94 /* SignalFeVq.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3916D314D300B8AA94 /* SignalFeVq.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E4AE4E16D3158D00B8AA94 /* SignalFeVqHTK.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3A16D314D300B8AA94 /* SignalFeVqHTK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E4AE4F16D3158D00B8AA94 /* SignalNoiseSuppress.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E4AE3B16D314D300B8AA94 /* SignalNoiseSuppress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6E4ADF316D2FB8400B8AA94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6E4AD9416D2F96500B8AA94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6E4ADB016D2FA9500B8AA94;
+			remoteInfo = MCMLCom;
+		};
+		D6E4ADF516D2FB8600B8AA94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6E4AD9416D2F96500B8AA94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6E4ADD316D2FB0900B8AA94;
+			remoteInfo = MCMLXml;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D6E4AD9A16D2F96500B8AA94 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				D6E4AE4216D3158D00B8AA94 /* libAdpcm.a in CopyFiles */,
+				D6E4AE4316D3158D00B8AA94 /* libiPhoneCommon.a in CopyFiles */,
+				D6E4AE4416D3158D00B8AA94 /* libiPhoneSignal.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E4ADAF16D2FA9500B8AA94 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				D6E4AE2016D30C2600B8AA94 /* ClientComCtrl.h in CopyFiles */,
+				D6E4AE2116D30C2600B8AA94 /* ComCtrl.h in CopyFiles */,
+				D6E4AE2216D30C2600B8AA94 /* ComData.h in CopyFiles */,
+				D6E4AE2316D30C2600B8AA94 /* MimeData.h in CopyFiles */,
+				D6E4AE2416D30C2600B8AA94 /* ResponseData.h in CopyFiles */,
+				D6E4ADB716D2FA9500B8AA94 /* MCMLCom.h in CopyFiles */,
+				D61A57BA17BB675B00A7AC34 /* DefaultDelegate.h in CopyFiles */,
+				D61A57BB17BB676800A7AC34 /* Code.h in CopyFiles */,
+				D61A57BF17BB6C9E00A7AC34 /* ChunkedMultipartConnection.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E4ADD216D2FB0900B8AA94 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				D6E4AE2516D30C3400B8AA94 /* Doc.h in CopyFiles */,
+				D6E4AE2616D30C3400B8AA94 /* Lock.h in CopyFiles */,
+				D6E4AE2716D30C3400B8AA94 /* mcml.h in CopyFiles */,
+				D6E4AE2816D30C3400B8AA94 /* Node.h in CopyFiles */,
+				D6E4AE2916D30C3400B8AA94 /* SchemaTypes.h in CopyFiles */,
+				D6E4AE2A16D30C3400B8AA94 /* XmlException.h in CopyFiles */,
+				D6E4AE2B16D30C3400B8AA94 /* XMLProcessor.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D61A57AF17BB603500A7AC34 /* ClientComCtrl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ClientComCtrl.mm; sourceTree = "<group>"; };
+		D61A57B117BB605E00A7AC34 /* ChunkedMultipartConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChunkedMultipartConnection.h; path = ../src/ChunkedMultipartConnection.h; sourceTree = "<group>"; };
+		D61A57B217BB605E00A7AC34 /* ChunkedMultipartConnection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ChunkedMultipartConnection.mm; sourceTree = "<group>"; };
+		D61A57B417BB606900A7AC34 /* Code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Code.h; sourceTree = "<group>"; };
+		D61A57B517BB607200A7AC34 /* Code.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Code.cpp; sourceTree = "<group>"; };
+		D61A57B717BB60C900A7AC34 /* DefaultDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultDelegate.h; sourceTree = "<group>"; };
+		D61A57B817BB60D400A7AC34 /* DefaultDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DefaultDelegate.mm; sourceTree = "<group>"; };
+		D629512E17B9F58000B2183E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		D6E4AD9C16D2F96500B8AA94 /* libiPhoneMCMLLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiPhoneMCMLLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6E4AD9F16D2F96500B8AA94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D6E4ADA316D2F96500B8AA94 /* iPhoneMCMLLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPhoneMCMLLib-Prefix.pch"; sourceTree = "<group>"; };
+		D6E4ADB116D2FA9500B8AA94 /* libMCMLCom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMCMLCom.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6E4ADB516D2FA9500B8AA94 /* MCMLCom-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MCMLCom-Prefix.pch"; sourceTree = "<group>"; };
+		D6E4ADB616D2FA9500B8AA94 /* MCMLCom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMLCom.h; sourceTree = "<group>"; };
+		D6E4ADC516D2FAD600B8AA94 /* ComCtrl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ComCtrl.mm; sourceTree = "<group>"; };
+		D6E4ADC616D2FAD600B8AA94 /* ComData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComData.cpp; sourceTree = "<group>"; };
+		D6E4ADC816D2FAD600B8AA94 /* MimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MimeData.cpp; sourceTree = "<group>"; };
+		D6E4ADC916D2FAD600B8AA94 /* ResponseData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResponseData.cpp; sourceTree = "<group>"; };
+		D6E4ADD416D2FB0900B8AA94 /* libMCMLXml.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMCMLXml.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6E4ADD816D2FB0900B8AA94 /* MCMLXml-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MCMLXml-Prefix.pch"; sourceTree = "<group>"; };
+		D6E4ADE916D2FB6100B8AA94 /* Doc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Doc.cpp; sourceTree = "<group>"; };
+		D6E4ADEA16D2FB6100B8AA94 /* mcml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mcml.cpp; sourceTree = "<group>"; };
+		D6E4ADEB16D2FB6100B8AA94 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		D6E4ADEC16D2FB6100B8AA94 /* SchemaTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SchemaTypes.cpp; sourceTree = "<group>"; };
+		D6E4ADED16D2FB6100B8AA94 /* XMLProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLProcessor.cpp; sourceTree = "<group>"; };
+		D6E4AE0B16D30B1A00B8AA94 /* Doc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doc.h; sourceTree = "<group>"; };
+		D6E4AE0C16D30B1A00B8AA94 /* Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lock.h; sourceTree = "<group>"; };
+		D6E4AE0D16D30B1A00B8AA94 /* mcml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcml.h; sourceTree = "<group>"; };
+		D6E4AE0E16D30B1A00B8AA94 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		D6E4AE0F16D30B1A00B8AA94 /* SchemaTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaTypes.h; sourceTree = "<group>"; };
+		D6E4AE1016D30B1A00B8AA94 /* XmlException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlException.h; sourceTree = "<group>"; };
+		D6E4AE1116D30B1A00B8AA94 /* XMLProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLProcessor.h; sourceTree = "<group>"; };
+		D6E4AE1B16D30BED00B8AA94 /* ClientComCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientComCtrl.h; sourceTree = "<group>"; };
+		D6E4AE1C16D30BED00B8AA94 /* ComCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComCtrl.h; sourceTree = "<group>"; };
+		D6E4AE1D16D30BED00B8AA94 /* ComData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComData.h; sourceTree = "<group>"; };
+		D6E4AE1E16D30BED00B8AA94 /* MimeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MimeData.h; sourceTree = "<group>"; };
+		D6E4AE1F16D30BED00B8AA94 /* ResponseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseData.h; sourceTree = "<group>"; };
+		D6E4AE3116D314D300B8AA94 /* define.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = define.hh; sourceTree = "<group>"; };
+		D6E4AE3216D314D300B8AA94 /* g726.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = g726.h; sourceTree = "<group>"; };
+		D6E4AE3316D314D300B8AA94 /* MemoryStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryStream.h; sourceTree = "<group>"; };
+		D6E4AE3416D314D300B8AA94 /* NsVadDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NsVadDef.h; sourceTree = "<group>"; };
+		D6E4AE3516D314D300B8AA94 /* ScopedMem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScopedMem.h; sourceTree = "<group>"; };
+		D6E4AE3616D314D300B8AA94 /* SignalAdpcm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalAdpcm.h; sourceTree = "<group>"; };
+		D6E4AE3716D314D300B8AA94 /* SignalCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalCommon.h; sourceTree = "<group>"; };
+		D6E4AE3816D314D300B8AA94 /* SignalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalConfig.h; sourceTree = "<group>"; };
+		D6E4AE3916D314D300B8AA94 /* SignalFeVq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalFeVq.h; sourceTree = "<group>"; };
+		D6E4AE3A16D314D300B8AA94 /* SignalFeVqHTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalFeVqHTK.h; sourceTree = "<group>"; };
+		D6E4AE3B16D314D300B8AA94 /* SignalNoiseSuppress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalNoiseSuppress.h; sourceTree = "<group>"; };
+		D6E4AE3C16D314E400B8AA94 /* libAdpcm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdpcm.a; sourceTree = "<group>"; };
+		D6E4AE3D16D314E400B8AA94 /* libiPhoneCommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiPhoneCommon.a; sourceTree = "<group>"; };
+		D6E4AE3E16D314E400B8AA94 /* libiPhoneSignal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiPhoneSignal.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6E4AD9916D2F96500B8AA94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E4ADA016D2F96500B8AA94 /* Foundation.framework in Frameworks */,
+				D6E4AE3F16D314E400B8AA94 /* libAdpcm.a in Frameworks */,
+				D6E4AE4016D314E400B8AA94 /* libiPhoneCommon.a in Frameworks */,
+				D6E4AE4116D314E400B8AA94 /* libiPhoneSignal.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E4ADAE16D2FA9500B8AA94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E4ADB216D2FA9500B8AA94 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E4ADD116D2FB0900B8AA94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D629512F17B9F58000B2183E /* libxml2.dylib in Frameworks */,
+				D6E4ADD516D2FB0900B8AA94 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D6E4AD9316D2F96500B8AA94 = {
+			isa = PBXGroup;
+			children = (
+				D629512E17B9F58000B2183E /* libxml2.dylib */,
+				D6E4ADA116D2F96500B8AA94 /* iPhoneMCMLLib */,
+				D6E4ADB316D2FA9500B8AA94 /* MCMLCom */,
+				D6E4ADD616D2FB0900B8AA94 /* MCMLXml */,
+				D6E4AD9E16D2F96500B8AA94 /* Frameworks */,
+				D6E4AD9D16D2F96500B8AA94 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D6E4AD9D16D2F96500B8AA94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4AD9C16D2F96500B8AA94 /* libiPhoneMCMLLib.a */,
+				D6E4ADB116D2FA9500B8AA94 /* libMCMLCom.a */,
+				D6E4ADD416D2FB0900B8AA94 /* libMCMLXml.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6E4AD9E16D2F96500B8AA94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4AD9F16D2F96500B8AA94 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6E4ADA116D2F96500B8AA94 /* iPhoneMCMLLib */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4ADA216D2F96500B8AA94 /* Supporting Files */,
+			);
+			path = iPhoneMCMLLib;
+			sourceTree = "<group>";
+		};
+		D6E4ADA216D2F96500B8AA94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4AE2F16D3149400B8AA94 /* SignalLib */,
+				D6E4ADA316D2F96500B8AA94 /* iPhoneMCMLLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6E4ADB316D2FA9500B8AA94 /* MCMLCom */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4ADB616D2FA9500B8AA94 /* MCMLCom.h */,
+				D6E4AE1A16D30BED00B8AA94 /* COM */,
+				D6E4ADC316D2FAD600B8AA94 /* src */,
+				D6E4ADB416D2FA9500B8AA94 /* Supporting Files */,
+			);
+			path = MCMLCom;
+			sourceTree = "<group>";
+		};
+		D6E4ADB416D2FA9500B8AA94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4ADB516D2FA9500B8AA94 /* MCMLCom-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6E4ADC316D2FAD600B8AA94 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D61A57B817BB60D400A7AC34 /* DefaultDelegate.mm */,
+				D61A57B517BB607200A7AC34 /* Code.cpp */,
+				D61A57B217BB605E00A7AC34 /* ChunkedMultipartConnection.mm */,
+				D61A57AF17BB603500A7AC34 /* ClientComCtrl.mm */,
+				D6E4ADC516D2FAD600B8AA94 /* ComCtrl.mm */,
+				D6E4ADC616D2FAD600B8AA94 /* ComData.cpp */,
+				D6E4ADC816D2FAD600B8AA94 /* MimeData.cpp */,
+				D6E4ADC916D2FAD600B8AA94 /* ResponseData.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		D6E4ADD616D2FB0900B8AA94 /* MCMLXml */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4AE0A16D30B1A00B8AA94 /* xml */,
+				D6E4ADE816D2FB6100B8AA94 /* src */,
+				D6E4ADD716D2FB0900B8AA94 /* Supporting Files */,
+			);
+			path = MCMLXml;
+			sourceTree = "<group>";
+		};
+		D6E4ADD716D2FB0900B8AA94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4ADD816D2FB0900B8AA94 /* MCMLXml-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6E4ADE816D2FB6100B8AA94 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4ADE916D2FB6100B8AA94 /* Doc.cpp */,
+				D6E4ADEA16D2FB6100B8AA94 /* mcml.cpp */,
+				D6E4ADEB16D2FB6100B8AA94 /* Node.cpp */,
+				D6E4ADEC16D2FB6100B8AA94 /* SchemaTypes.cpp */,
+				D6E4ADED16D2FB6100B8AA94 /* XMLProcessor.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		D6E4AE0A16D30B1A00B8AA94 /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4AE0B16D30B1A00B8AA94 /* Doc.h */,
+				D6E4AE0C16D30B1A00B8AA94 /* Lock.h */,
+				D6E4AE0D16D30B1A00B8AA94 /* mcml.h */,
+				D6E4AE0E16D30B1A00B8AA94 /* Node.h */,
+				D6E4AE0F16D30B1A00B8AA94 /* SchemaTypes.h */,
+				D6E4AE1016D30B1A00B8AA94 /* XmlException.h */,
+				D6E4AE1116D30B1A00B8AA94 /* XMLProcessor.h */,
+			);
+			path = xml;
+			sourceTree = "<group>";
+		};
+		D6E4AE1A16D30BED00B8AA94 /* COM */ = {
+			isa = PBXGroup;
+			children = (
+				D61A57B117BB605E00A7AC34 /* ChunkedMultipartConnection.h */,
+				D61A57B717BB60C900A7AC34 /* DefaultDelegate.h */,
+				D61A57B417BB606900A7AC34 /* Code.h */,
+				D6E4AE1B16D30BED00B8AA94 /* ClientComCtrl.h */,
+				D6E4AE1C16D30BED00B8AA94 /* ComCtrl.h */,
+				D6E4AE1D16D30BED00B8AA94 /* ComData.h */,
+				D6E4AE1E16D30BED00B8AA94 /* MimeData.h */,
+				D6E4AE1F16D30BED00B8AA94 /* ResponseData.h */,
+			);
+			path = COM;
+			sourceTree = "<group>";
+		};
+		D6E4AE2F16D3149400B8AA94 /* SignalLib */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4AE3C16D314E400B8AA94 /* libAdpcm.a */,
+				D6E4AE3D16D314E400B8AA94 /* libiPhoneCommon.a */,
+				D6E4AE3E16D314E400B8AA94 /* libiPhoneSignal.a */,
+				D6E4AE3016D314BD00B8AA94 /* Signal */,
+			);
+			path = SignalLib;
+			sourceTree = "<group>";
+		};
+		D6E4AE3016D314BD00B8AA94 /* Signal */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4AE3116D314D300B8AA94 /* define.hh */,
+				D6E4AE3216D314D300B8AA94 /* g726.h */,
+				D6E4AE3316D314D300B8AA94 /* MemoryStream.h */,
+				D6E4AE3416D314D300B8AA94 /* NsVadDef.h */,
+				D6E4AE3516D314D300B8AA94 /* ScopedMem.h */,
+				D6E4AE3616D314D300B8AA94 /* SignalAdpcm.h */,
+				D6E4AE3716D314D300B8AA94 /* SignalCommon.h */,
+				D6E4AE3816D314D300B8AA94 /* SignalConfig.h */,
+				D6E4AE3916D314D300B8AA94 /* SignalFeVq.h */,
+				D6E4AE3A16D314D300B8AA94 /* SignalFeVqHTK.h */,
+				D6E4AE3B16D314D300B8AA94 /* SignalNoiseSuppress.h */,
+			);
+			path = Signal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D66B4A0D17BCB60600DB5EE3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E4AE4516D3158D00B8AA94 /* define.hh in Headers */,
+				D6E4AE4616D3158D00B8AA94 /* g726.h in Headers */,
+				D6E4AE4716D3158D00B8AA94 /* MemoryStream.h in Headers */,
+				D6E4AE4816D3158D00B8AA94 /* NsVadDef.h in Headers */,
+				D6E4AE4916D3158D00B8AA94 /* ScopedMem.h in Headers */,
+				D6E4AE4A16D3158D00B8AA94 /* SignalAdpcm.h in Headers */,
+				D6E4AE4B16D3158D00B8AA94 /* SignalCommon.h in Headers */,
+				D6E4AE4C16D3158D00B8AA94 /* SignalConfig.h in Headers */,
+				D6E4AE4D16D3158D00B8AA94 /* SignalFeVq.h in Headers */,
+				D6E4AE4E16D3158D00B8AA94 /* SignalFeVqHTK.h in Headers */,
+				D6E4AE4F16D3158D00B8AA94 /* SignalNoiseSuppress.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D6E4AD9B16D2F96500B8AA94 /* iPhoneMCMLLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6E4ADAA16D2F96500B8AA94 /* Build configuration list for PBXNativeTarget "iPhoneMCMLLib" */;
+			buildPhases = (
+				D6E4AD9816D2F96500B8AA94 /* Sources */,
+				D6E4AD9916D2F96500B8AA94 /* Frameworks */,
+				D6E4AD9A16D2F96500B8AA94 /* CopyFiles */,
+				D66B4A0D17BCB60600DB5EE3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6E4ADF416D2FB8400B8AA94 /* PBXTargetDependency */,
+				D6E4ADF616D2FB8600B8AA94 /* PBXTargetDependency */,
+			);
+			name = iPhoneMCMLLib;
+			productName = iPhoneMCMLLib;
+			productReference = D6E4AD9C16D2F96500B8AA94 /* libiPhoneMCMLLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D6E4ADB016D2FA9500B8AA94 /* MCMLCom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6E4ADBA16D2FA9500B8AA94 /* Build configuration list for PBXNativeTarget "MCMLCom" */;
+			buildPhases = (
+				D6E4ADAD16D2FA9500B8AA94 /* Sources */,
+				D6E4ADAE16D2FA9500B8AA94 /* Frameworks */,
+				D6E4ADAF16D2FA9500B8AA94 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MCMLCom;
+			productName = MCMLCom;
+			productReference = D6E4ADB116D2FA9500B8AA94 /* libMCMLCom.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D6E4ADD316D2FB0900B8AA94 /* MCMLXml */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6E4ADDD16D2FB0900B8AA94 /* Build configuration list for PBXNativeTarget "MCMLXml" */;
+			buildPhases = (
+				D6E4ADD016D2FB0900B8AA94 /* Sources */,
+				D6E4ADD116D2FB0900B8AA94 /* Frameworks */,
+				D6E4ADD216D2FB0900B8AA94 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MCMLXml;
+			productName = MCMLXml;
+			productReference = D6E4ADD416D2FB0900B8AA94 /* libMCMLXml.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6E4AD9416D2F96500B8AA94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "imac-dev";
+			};
+			buildConfigurationList = D6E4AD9716D2F96500B8AA94 /* Build configuration list for PBXProject "iPhoneMCMLLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D6E4AD9316D2F96500B8AA94;
+			productRefGroup = D6E4AD9D16D2F96500B8AA94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6E4AD9B16D2F96500B8AA94 /* iPhoneMCMLLib */,
+				D6E4ADB016D2FA9500B8AA94 /* MCMLCom */,
+				D6E4ADD316D2FB0900B8AA94 /* MCMLXml */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6E4AD9816D2F96500B8AA94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E4ADAD16D2FA9500B8AA94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E4ADCB16D2FAD600B8AA94 /* ComCtrl.mm in Sources */,
+				D6E4ADCC16D2FAD600B8AA94 /* ComData.cpp in Sources */,
+				D6E4ADCE16D2FAD600B8AA94 /* MimeData.cpp in Sources */,
+				D6E4ADCF16D2FAD600B8AA94 /* ResponseData.cpp in Sources */,
+				D61A57B017BB603500A7AC34 /* ClientComCtrl.mm in Sources */,
+				D61A57B317BB605E00A7AC34 /* ChunkedMultipartConnection.mm in Sources */,
+				D61A57B617BB607200A7AC34 /* Code.cpp in Sources */,
+				D61A57B917BB60D400A7AC34 /* DefaultDelegate.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E4ADD016D2FB0900B8AA94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E4ADEE16D2FB6100B8AA94 /* Doc.cpp in Sources */,
+				D6E4ADEF16D2FB6100B8AA94 /* mcml.cpp in Sources */,
+				D6E4ADF016D2FB6100B8AA94 /* Node.cpp in Sources */,
+				D6E4ADF116D2FB6100B8AA94 /* SchemaTypes.cpp in Sources */,
+				D6E4ADF216D2FB6100B8AA94 /* XMLProcessor.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6E4ADF416D2FB8400B8AA94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6E4ADB016D2FA9500B8AA94 /* MCMLCom */;
+			targetProxy = D6E4ADF316D2FB8400B8AA94 /* PBXContainerItemProxy */;
+		};
+		D6E4ADF616D2FB8600B8AA94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6E4ADD316D2FB0900B8AA94 /* MCMLXml */;
+			targetProxy = D6E4ADF516D2FB8600B8AA94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D6E4ADA816D2F96500B8AA94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D6E4ADA916D2F96500B8AA94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6E4ADAB16D2F96500B8AA94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DSTROOT = /tmp/iPhoneMCMLLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iPhoneMCMLLib/iPhoneMCMLLib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = $SDK_DIR/usr/include/libxml2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/iPhoneMCMLLib/SignalLib\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DEBUG=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D6E4ADAC16D2F96500B8AA94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DSTROOT = /tmp/iPhoneMCMLLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iPhoneMCMLLib/iPhoneMCMLLib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = $SDK_DIR/usr/include/libxml2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/iPhoneMCMLLib/SignalLib\"",
+				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D6E4ADBB16D2FA9500B8AA94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/MCMLCom.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MCMLCom/MCMLCom-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_SHADOW = NO;
+				HEADER_SEARCH_PATHS = /user/include/libxml2;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DEBUG=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		D6E4ADBC16D2FA9500B8AA94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/MCMLCom.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MCMLCom/MCMLCom-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_SHADOW = NO;
+				HEADER_SEARCH_PATHS = /user/include/libxml2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+		D6E4ADDE16D2FB0900B8AA94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/MCMLXml.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MCMLXml/MCMLXml-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = $SDK_DIR/usr/include/libxml2;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DEBUG=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D6E4ADDF16D2FB0900B8AA94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/MCMLXml.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MCMLXml/MCMLXml-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = $SDK_DIR/usr/include/libxml2;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6E4AD9716D2F96500B8AA94 /* Build configuration list for PBXProject "iPhoneMCMLLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E4ADA816D2F96500B8AA94 /* Debug */,
+				D6E4ADA916D2F96500B8AA94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6E4ADAA16D2F96500B8AA94 /* Build configuration list for PBXNativeTarget "iPhoneMCMLLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E4ADAB16D2F96500B8AA94 /* Debug */,
+				D6E4ADAC16D2F96500B8AA94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6E4ADBA16D2FA9500B8AA94 /* Build configuration list for PBXNativeTarget "MCMLCom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E4ADBB16D2FA9500B8AA94 /* Debug */,
+				D6E4ADBC16D2FA9500B8AA94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6E4ADDD16D2FB0900B8AA94 /* Build configuration list for PBXNativeTarget "MCMLXml" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E4ADDE16D2FB0900B8AA94 /* Debug */,
+				D6E4ADDF16D2FB0900B8AA94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6E4AD9416D2F96500B8AA94 /* Project object */;
+}

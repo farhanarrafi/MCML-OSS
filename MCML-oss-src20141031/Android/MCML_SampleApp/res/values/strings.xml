@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MCMLSample</string>
+    <string name="mes_language_select">Language Select</string>
+    <string-array name="languages">
+        <item>Japanese</item>
+        <item>English</item>
+        <item>Mandarin</item>
+        <item>Korean</item>
+    </string-array>
+    <string name="p2talk_message">Text	Please speak while pressing this button. Release the button when you are finished speaking.</string>
+    <string name="proc_recording">Recording...</string>
+    <string name="proc_recognizing">Recognizing...</string>
+    <string name="proc_translating">Translating...</string>
+    <string name="err_recognition">&lt;&lt;There is no recognition result.&gt;&gt;</string>
+    <string name="err_translation">&lt;&lt;There is no translation result.&gt;&gt;</string>
+    <string name="err_backtranslation">&lt;&lt;There is no back translation result.&gt;&gt;</string>
+</resources>

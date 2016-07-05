@@ -1,0 +1,81 @@
+<MCML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	Version="1.0">
+	<User>
+		<Transmitter>
+			<Device>
+				<Location>
+					<URI>iPhone3GS</URI>
+					<GlobalPosition Longitude="135.754807" Latitude="35.009129" />
+				</Location>
+			</Device>
+			<UserProfile ID="nozaki" />
+		</Transmitter>
+		<Receiver>
+			<Device>
+				<Location>
+					<URI>iPhone3GS</URI>
+				</Location>
+			</Device>
+			<UserProfile ID="nozaki" />
+		</Receiver>
+		<Receiver>
+			<Device>
+				<Location>
+					<URI>iPhone4</URI>
+				</Location>
+			</Device>
+			<UserProfile ID="tom" />
+		</Receiver>
+	</User>
+	<Server>
+		<Request Service="ASR" ProcessOrder="1">
+
+			<!-- e.g. owner -->
+
+			<InputUserProfile ID="owner" Gender="Male" Age="29">
+				<InputModality>
+					<Speaking>
+						<Language ID="zh" Fluency="5" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+			<InputUserProfile ID="owner" Gender="Male" Age="29">
+				<InputModality>
+					<Speaking>
+						<Language ID="zh" Fluency="4" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+			<InputUserProfile ID="owner" Gender="Male" Age="29">
+				<InputModality>
+					<Speaking>
+						<Language ID="zh" Fluency="3" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+
+			<!-- e.g. guest -->
+
+			<!-- <InputUserProfile ID="guest" /> -->
+			<TargetOutput>
+				<HypothesisFormat NofN-best="5" />
+
+				<!-- <LanguageType ID="jv" /> -->
+			</TargetOutput>
+			<Input>
+				<Data>
+					<Audio ChannelID="1">
+						<ModelType>
+							<Domain>Trabel</Domain>
+							<Task>Dictation</Task>
+						</ModelType>
+						<Signal SamplingRate="16000" ValueType="integer"
+							AudioFormat="raw PCM" BitRate="24" Endian="big" ChannelQty="0" />
+					</Audio>
+				</Data>
+				<AttachedBinary ChannelID="1" DataID="zh" />
+
+			</Input>
+		</Request>
+	</Server>
+</MCML>

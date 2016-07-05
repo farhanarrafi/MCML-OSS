@@ -1,0 +1,65 @@
+<MCML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	Version="1.0">
+	<User>
+		<Transmitter>
+			<Device>
+				<Location>
+					<URI>iPhone4</URI>
+				</Location>
+			</Device>
+			<UserProfile ID="nozaki" Gender="Male" Age="45" />
+		</Transmitter>
+		<Receiver>
+			<Device>
+				<Location>
+					<URI>iPhone4</URI>
+				</Location>
+			</Device>
+			<UserProfile ID="nozaki" Gender="Male" Age="45" />
+		</Receiver>
+	</User>
+	<Server>
+		<Request Service="MT" ProcessOrder="2">
+			<InputUserProfile ID="EF050A,12.345" Gender="Male"
+				Age="45">
+				<InputModality>
+					<Speaking>
+						<Language ID="ms" Fluency="0" />
+					</Speaking>
+				</InputModality>
+			</InputUserProfile>
+			<TargetOutput>
+				<HypothesisFormat NofN-best="1" />
+				<LanguageType ID="en" />
+			</TargetOutput>
+			<Input>
+				<Data>
+					<Text ChannelID="1">
+						<ModelType>
+							<Language ID="ms" />
+							<Domain>Travel</Domain>
+							<Task>Dictation </Task>
+							<Personality ID="EF050A,12.345" Gender="Male" Age="29" />
+						</ModelType>
+						<SentenceSequence Order="1" Score="2.44"
+							N-BestRank="1">
+							<Sentence Order="1">
+								<Function>text</Function>
+								<Surface Delimiter="|">Telah disambungkan. Tahniah.</Surface>
+								<Chunk Order="1">
+									<Surface>Telah</Surface>
+								</Chunk>
+								<Chunk Order="2">
+									<Surface>disambungkan</Surface>
+								</Chunk>
+								<Chunk Order="3">
+									<Surface>Tahniah</Surface>
+								</Chunk>
+							</Sentence>
+						</SentenceSequence>
+					</Text>
+				</Data>
+			</Input>
+		</Request>
+	</Server>
+</MCML>

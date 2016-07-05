@@ -1,0 +1,2 @@
+//https://mcml-x.nict.go.jp/g-xxa/SocketServlet/Information mcml-x-xxa
+http://mcml-x.nict.go.jp/xxx/Information mcml-xxx

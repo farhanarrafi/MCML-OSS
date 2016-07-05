@@ -1,0 +1,16 @@
+//
+// Prefix header for all source files of the 'iPhoneMCMLLib' target in the 'iPhoneMCMLLib' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
+
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%s(Line:%d) " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define DLog(...)
+#endif
+
+
+#define kMCMCLConnectorDefaultEndian false      //false = littleEndian  true = bigEndian

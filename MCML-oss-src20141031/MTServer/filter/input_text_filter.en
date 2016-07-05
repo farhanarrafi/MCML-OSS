@@ -1,0 +1,26 @@
+[setting]
+CHAR_TYPE=ASCII
+
+[delete_word]
+|
++
+&
+=
+$
+{
+}
+[
+]
+;
+/
+,
+"
+\
+
+[replace_word]
+。	.
+．	.
+：	:
+？	.
+！	.
+
