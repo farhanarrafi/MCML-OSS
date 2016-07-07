@@ -27,7 +27,7 @@ The MCML OSS consists of MCML communication libraries on both the client and the
 　　　　　　　　　|___TTSServer<br>
 　　　　　　　　　|___XMLLib<br>
 
-## Legal notes
+## Legal Notes
 
 Copyright  2015, NICT / All rights  reserved.
 
